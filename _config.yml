@@ -1,0 +1,23 @@
+# Meta
+name: 은평 살맛나는 마을 지도!
+description: 
+url: 
+baseurl: ''
+author: 코드포은평 codeforep
+
+timezone: 'Asia/Seoul'
+permalink: pretty
+
+# Build
+exclude:
+  - .jekyll-metadata
+  - .gitignore
+  - .ruby-version
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
