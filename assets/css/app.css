@@ -175,3 +175,9 @@ input[type="radio"], input[type="checkbox"] {
     display: none !important;
   }
 }
+
+.leaflet-control-layers-base,
+.leaflet-control-layers-separator,
+.leaflet-control-layers-group-name {
+  display: none;
+}
