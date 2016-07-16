@@ -172,7 +172,7 @@ var boroughs = L.geoJson(null, {
     };
   }
 });
-$.getJSON("data/boroughs.geojson", function (data) {
+$.getJSON("data/ep-dong.geojson", function (data) {
   boroughs.addData(data);
 });
 
