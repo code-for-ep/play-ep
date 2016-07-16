@@ -1,9 +1,8 @@
 # Meta
 name: 은평 살맛나는 마을 지도!
-description: 
-url: 
+description: 은평 살맛나는 마을 지도는 2016년 은평마을공동체 지원센터에서 제작했고 코드포은평에서 이걸 웹지도로 만들면 재밌겠다 해서 만들어봤습니다. 
+url: http://play.codeforep.org
 baseurl: ''
-author: 코드포은평 codeforep
 
 timezone: 'Asia/Seoul'
 permalink: pretty
@@ -21,3 +20,16 @@ exclude:
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+gems:
+  - jekyll-seo-tag
+
+# SEO
+
+author: 코드포은평 codeforep
+
+facebook:
+  publisher: https://www.facebook.com/코드포은평-220166888361852/
+
+image:
+  facebook: /assets/img/play-ep-screenshot.jpg
