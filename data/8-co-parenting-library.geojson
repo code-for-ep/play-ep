@@ -54,22 +54,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          127.00997,
-          37.606183
-        ]
-      },
-      "properties": {
-        "NAME": "정릉푸루지오북카페",
-        "ADDRESS1": "서울 성북구 보국문로 19",
-        "TEL": "070-8261-0579",
-        "URL": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           126.913685,
           37.634284
         ]
@@ -110,22 +94,6 @@
         "NAME": "구산동도서관마을",
         "ADDRESS1": "서울특별시 은평구 구산동 17-37",
         "TEL": "070-4960-0808",
-        "URL": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          126.850061,
-          37.551791
-        ]
-      },
-      "properties": {
-        "NAME": "역마을도서관",
-        "ADDRESS1": "서울 강서구 화곡로 312",
-        "TEL": "02-2600-7660",
         "URL": ""
       }
     },
