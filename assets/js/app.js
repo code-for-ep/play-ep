@@ -161,7 +161,7 @@ var highlightStyle = {
   radius: 10
 };
 
-var boroughs = L.geoJson(null, {
+var epdong = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "purple",
@@ -173,11 +173,11 @@ var boroughs = L.geoJson(null, {
   }
 });
 $.getJSON("data/ep-dong.geojson", function (data) {
-  boroughs.addData(data);
+  epdong.addData(data);
 });
 
 $("#full-extent-btn").click(function() {
-  map.fitBounds(boroughs.getBounds());
+  map.fitBounds(epdong.getBounds());
   $(".navbar-collapse.in").collapse("hide");
   return false;
 });
@@ -542,8 +542,8 @@ map = L.map("map", {
   zoom: 21,
   center: [126.929263, 37.611895],
   crs: L.Proj.CRS.TMS.Naver,
-  layers: [boroughs, markerClusters, highlight],
-  layers: [boroughs],
+  layers: [epdong, markerClusters, highlight],
+  layers: [epdong],
   zoomControl: false,
   attributionControl: false
 });
@@ -722,8 +722,8 @@ $("#featureModal").on("hidden.bs.modal", function (e) {
 $(document).one("ajaxStop", function () {
   $("#loading").hide();
   sizeLayerControl();
-  /* Fit map to boroughs bounds */
-  map.fitBounds(boroughs.getBounds());
+  /* Fit map to epdong bounds */
+  map.fitBounds(epdong.getBounds());
   featureList = new List("features", {valueNames: ["feature-name"]});
   featureList.sort("feature-name", {order:"asc"});
 
