@@ -181,3 +181,6 @@ input[type="radio"], input[type="checkbox"] {
 .leaflet-control-layers-group-name {
   display: none;
 }
+.leaflet-control-layers-group label {
+  margin: .7em 0;
+}
