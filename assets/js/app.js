@@ -1,3 +1,6 @@
+---
+---
+
 var map, featureList;
 var hubSearch = publicSearch = communitySearch = socialSearch = npoSearch = townSearch = altSearch = coSearch = [];
 
@@ -90,56 +93,56 @@ function syncSidebar() {
   hubs.eachLayer(function (layer) {
     if (map.hasLayer(hubLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/1-hubs.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/1-hubs.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   publics.eachLayer(function (layer) {
     if (map.hasLayer(publicLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/2-publics.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/2-publics.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   community.eachLayer(function (layer) {
     if (map.hasLayer(communityLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/3-community.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/3-community.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   social.eachLayer(function (layer) {
     if (map.hasLayer(socialLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/4-social.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/4-social.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   npo.eachLayer(function (layer) {
     if (map.hasLayer(npoLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/5-npo.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/5-npo.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   town.eachLayer(function (layer) {
     if (map.hasLayer(townLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/6-town.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/6-town.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   alt.eachLayer(function (layer) {
     if (map.hasLayer(altLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/7-alt.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/7-alt.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
   co.eachLayer(function (layer) {
     if (map.hasLayer(coLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/8-co.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/8-co.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -197,7 +200,7 @@ var hubs = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/1-hubs.png",
+        iconUrl: "{{ "assets/img/1-hubs.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -217,7 +220,7 @@ var hubs = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/1-hubs.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/1-hubs.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       hubSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADDRESS1,
@@ -240,7 +243,7 @@ var publics = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/2-publics.png",
+        iconUrl: "{{ "assets/img/2-publics.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -260,7 +263,7 @@ var publics = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/2-publics.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/2-publics.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       publicSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -282,7 +285,7 @@ var community = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/3-community.png",
+        iconUrl: "{{ "assets/img/3-community.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -302,7 +305,7 @@ var community = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/3-community.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/3-community.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       communitySearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -325,7 +328,7 @@ var social = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/4-social.png",
+        iconUrl: "{{ "assets/img/4-social.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -345,7 +348,7 @@ var social = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/4-social.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/4-social.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       socialSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -368,7 +371,7 @@ var npo = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/5-npo.png",
+        iconUrl: "{{ "assets/img/5-npo.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -388,7 +391,7 @@ var npo = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/5-npo.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/5-npo.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       npoSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -411,7 +414,7 @@ var town = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/6-town.png",
+        iconUrl: "{{ "assets/img/6-town.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -431,7 +434,7 @@ var town = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/6-town.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/6-town.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       townSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -454,7 +457,7 @@ var alt = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/7-alt.png",
+        iconUrl: "{{ "assets/img/7-alt.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -474,7 +477,7 @@ var alt = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/7-alt.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/7-alt.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       altSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -497,7 +500,7 @@ var co = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/8-co.png",
+        iconUrl: "{{ "assets/img/8-co.png" | relative_url }}",
         iconSize: [48, 48],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -517,7 +520,7 @@ var co = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/8-co.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="{{ "assets/img/8-co.png" | relative_url }}"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       coSearch.push({
         name: layer.feature.properties.NAME,
         address: layer.feature.properties.ADRESS1,
@@ -685,14 +688,14 @@ if (document.body.clientWidth <= 767) {
 
 var groupedOverlays = {
   "분야": {
-    "<img src='assets/img/1-hubs.png' width='24' height='24'>&nbsp;&nbsp;1. 허브,단지": hubLayer,
-    "<img src='assets/img/2-publics.png' width='24' height='24'>&nbsp;&nbsp;2. 공공기관": publicLayer,
-    "<img src='assets/img/3-community.png' width='24' height='24'>&nbsp;&nbsp;3. 커뮤니티": communityLayer,
-    "<img src='assets/img/4-social.png' width='24' height='24'>&nbsp;&nbsp;4. 사회적 경제조직": socialLayer,
-    "<img src='assets/img/5-npo.png' width='24' height='24'>&nbsp;&nbsp;5. NPO,문화예술단체": npoLayer,
-    "<img src='assets/img/6-town.png' width='24' height='24'>&nbsp;&nbsp;6. 마을공동체": townLayer,
-    "<img src='assets/img/7-alt.png' width='24' height='24'>&nbsp;&nbsp;7. 대안주거공간": altLayer,
-    "<img src='assets/img/8-co.png' width='24' height='24'>&nbsp;&nbsp;8. 공동육아,작은도서관": coLayer
+    "<img src='{{ "assets/img/1-hubs.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;1. 허브,단지": hubLayer,
+    "<img src='{{ "assets/img/2-publics.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;2. 공공기관": publicLayer,
+    "<img src='{{ "assets/img/3-community.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;3. 커뮤니티": communityLayer,
+    "<img src='{{ "assets/img/4-social.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;4. 사회적 경제조직": socialLayer,
+    "<img src='{{ "assets/img/5-npo.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;5. NPO,문화예술단체": npoLayer,
+    "<img src='{{ "assets/img/6-town.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;6. 마을공동체": townLayer,
+    "<img src='{{ "assets/img/7-alt.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;7. 대안주거공간": altLayer,
+    "<img src='{{ "assets/img/8-co.png" | relative_url }}' width='24' height='24'>&nbsp;&nbsp;8. 공동육아,작은도서관": coLayer
   }
 };
 
@@ -856,7 +859,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: hubsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/1-hubs.png' width='24' height='24'>허브,단지</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/1-hubs.png" | relative_url }}' width='24' height='24'>허브,단지</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -864,7 +867,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: publicsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/2-publics.png' width='24' height='24'>&nbsp;공공기관</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/2-publics.png" | relative_url }}' width='24' height='24'>&nbsp;공공기관</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -872,7 +875,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: communityBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/3-community.png' width='24' height='24'>&nbsp;커뮤니티</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/3-community.png" | relative_url }}' width='24' height='24'>&nbsp;커뮤니티</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -880,7 +883,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: socialBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/4-social.png' width='24' height='24'>&nbsp;사회적 경제조직</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/4-social.png" | relative_url }}' width='24' height='24'>&nbsp;사회적 경제조직</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   },  {
@@ -888,7 +891,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: npoBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/5-npo.png' width='24' height='24'>&nbsp;NPO,문화예술단체</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/5-npo.png" | relative_url }}' width='24' height='24'>&nbsp;NPO,문화예술단체</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   },  {
@@ -896,7 +899,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: townBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/6-town.png' width='24' height='24'>&nbsp;마을공동체</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/6-town.png" | relative_url }}' width='24' height='24'>&nbsp;마을공동체</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   },  {
@@ -904,7 +907,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: altBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/7-alt.png' width='24' height='24'>&nbsp;대안주거공간</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/7-alt.png" | relative_url }}' width='24' height='24'>&nbsp;대안주거공간</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   },  {
@@ -912,7 +915,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: coBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/8-co.png' width='24' height='24'>&nbsp;공동육아,작은도서관</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/8-co.png" | relative_url }}' width='24' height='24'>&nbsp;공동육아,작은도서관</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -920,7 +923,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: geonamesBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='24' height='24'>&nbsp;GeoNames</h4>"
+      header: "<h4 class='typeahead-header'><img src='{{ "assets/img/globe.png'" | relative_url }} width='24' height='24'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
     if (datum.source === "hubs") {

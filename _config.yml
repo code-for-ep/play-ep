@@ -1,8 +1,9 @@
 # Meta
 name: 은평 살맛나는 마을 지도!
 description: 은평 살맛나는 마을 지도는 2016년 은평마을공동체 지원센터에서 제작했고 코드포은평에서 이걸 웹지도로 만들면 재밌겠다 해서 만들어봤습니다. 
-url: http://play.codeforep.org
-baseurl: ''
+url: 
+baseurl: 
+org_url: 'https://code-for-ep.github.io'
 
 timezone: 'Asia/Seoul'
 permalink: pretty
